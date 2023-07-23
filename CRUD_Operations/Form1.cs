@@ -69,7 +69,6 @@ namespace CRUD_Operations
 				SqlCommand cmd = new SqlCommand("Delete FROM PatientTb Where PatientID = @ID",  con);
 				cmd.CommandType = CommandType.Text;
 				cmd.Parameters.AddWithValue("@ID", StudentId);
-				cmd.Parameters.RemoveAt(1);
 
 				con.Open();
 				cmd.ExecuteNonQuery();
